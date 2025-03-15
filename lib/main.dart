@@ -1,6 +1,6 @@
+import 'package:ecommerce_application/common/widgets/appbar.dart';
 import 'package:flutter/material.dart';
 
-import 'screens/home/page/home.dart';
 
 void main() {
   runApp(const Freebies());
