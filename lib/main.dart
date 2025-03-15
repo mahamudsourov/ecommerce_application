@@ -1,4 +1,4 @@
-import 'package:ecommerce_application/common/widgets/appbar.dart';
+import 'package:ecommerce_application/screens/home/page/home.dart';
 import 'package:flutter/material.dart';
 
 
@@ -18,3 +18,4 @@ class Freebies extends StatelessWidget {
     );
   }
 }
+
