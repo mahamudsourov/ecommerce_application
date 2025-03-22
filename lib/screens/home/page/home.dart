@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:icons_plus/icons_plus.dart';
 import '../../../common/widgets/appbar.dart';
+import '../widgets/bottom_navBar.dart';
+
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -30,7 +31,7 @@ class _HomeState extends State<Home> {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     Image.asset(
-                      'assets/images/image.png',
+                      'assets/images/headphone.png',
                       width: 150,
                     ),
                     const SizedBox(height: 8),
@@ -61,10 +62,10 @@ class _HomeState extends State<Home> {
           ),
         ),
       ],
-    ), 
-    Container(color: Colors.blue), 
-    Container(color: Colors.green), 
-    Container(color: Colors.orange), 
+    ),
+    Container(color: Colors.blue),
+    Container(color: Colors.green),
+    Container(color: Colors.orange),
   ];
 
   void _onItemTapped(int index) {
@@ -81,28 +82,9 @@ class _HomeState extends State<Home> {
         backButton: true,
       ),
       body: _pages[_selectedIndex],
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
+      bottomNavigationBar: FBottomBar(
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Iconsax.home_outline),
-            label: "Home",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Iconsax.heart_outline),
-            label: "Wishlist",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Iconsax.shopping_bag_outline),
-            label: "Order",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Iconsax.user_add_bold),
-            label: "Accounts",
-          ),
-        ],
       ),
     );
   }
