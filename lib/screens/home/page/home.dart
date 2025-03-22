@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:icons_plus/icons_plus.dart';
 import '../../../common/widgets/appbar.dart';
 
 class Home extends StatelessWidget {
@@ -8,16 +9,14 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: FAppBar(
-        title: "New Title",
+        title: "Mega Shop",
         backButton: true,
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          
           Center(
             child: Container(
-              width: 300, 
+              width: 300,
               margin: const EdgeInsets.all(8.0),
               padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 12),
               decoration: BoxDecoration(
@@ -50,13 +49,12 @@ class Home extends StatelessWidget {
                   const Icon(
                     Icons.local_shipping,
                     color: Colors.white,
-                    size: 35, 
+                    size: 35,
                   ),
                 ],
               ),
             ),
           ),
-
           Center(
             child: Card(
               margin: const EdgeInsets.all(8.0),
@@ -65,7 +63,7 @@ class Home extends StatelessWidget {
               ),
               elevation: 4,
               child: SizedBox(
-                width: 250, 
+                width: 250,
                 child: Padding(
                   padding: const EdgeInsets.all(12.0),
                   child: Column(
@@ -73,7 +71,7 @@ class Home extends StatelessWidget {
                     children: [
                       Image.asset(
                         'assets/images/image.png',
-                        width: 150, 
+                        width: 150,
                       ),
                       const SizedBox(height: 8),
                       const Text(
@@ -101,6 +99,27 @@ class Home extends StatelessWidget {
                 ),
               ),
             ),
+          ),
+        ],
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Iconsax.home_outline),
+            label: "Home",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Iconsax.heart_outline),
+            label: "Wishlist",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Iconsax.shopping_bag_outline),
+            label: "Order",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Iconsax.user_add_bold),
+            label: "Accounts",
           ),
         ],
       ),
